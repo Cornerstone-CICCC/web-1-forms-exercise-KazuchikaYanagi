@@ -1,14 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Information Form</title>
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
     <form enctype="multipart/form-data" action="index.html" method="get">
-        <!-- FORM FIELDS HERE -->
+      <!-- FORM FIELDS HERE -->
+      <fieldset>
+        <legend>Personal information</legend>
+        <label for="name">Name:</label>
+        <input type="name" class="wdt" id="name" />
+        <label for="email">Email:</label>
+        <input type="email" required class="wdt" id="email" />
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          minlength="12"
+          title="Need at least 12 characters in this box"
+          class="wdt"
+          id="password"
+        />
+
+        <label for="form-data">Data of Birth:</label>
+        <input type="date" class="wdt" id="form-data" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" class="wdt" />
+        <label for="hobby">Hobby:</label><br />
+        <input type="text" list="Hobby" id="hobby" />
+        <datalist id="hobby">
+          <option value="Drawing"></option>
+          <option value="Swimming"></option>
+          <option value="Dancing"></option></datalist
+        ><br />
+        <label for="bar">Experience Level:</label><br />
+        <input type="range" id="bar" />
+      </fieldset>
+
+      <fieldset id="contact">
+        <legend>Contact Preferences</legend>
+        <label for="" class="wdt">Preferred Contact Method:</label>
+        <select name="" id="selector" class="wdt">
+          <option value="">Email</option>
+          <option value="">Phone</option>
+          <option value="">Mail</option>
+        </select>
+        <label for="">Subscribe to Newsletter:</label><br />
+        <input type="checkbox" />
+      </fieldset>
+
+      <fieldset id="personal">
+        <legend>Preferences</legend>
+        <label for="gender">Gender:</label>
+        <div id="gender">
+          <input type="radio" name="gender" value="Male" class="radio" />
+          <label for="">Male</label><br />
+          <input type="radio" name="gender" value="Female" class="radio" />
+          <label for="">Female</label><br />
+          <input type="radio" name="gender" value="Other" class="radio" />
+          <label for="">Other</label><br />
+        </div>
+      </fieldset>
+
+      <fieldset id="pref">
+        <legend>More Information</legend>
+        <label for="bio">Bio:</label>
+        <textarea name="" id="bio" class="wdt" cols="30" rows="30"></textarea>
+      </fieldset>
+
+      <fieldset id="Contact">
+        <legend>Upload Documents</legend>
+        <label for="file">Resume and other certificates:</label>
+        <input type="file" accept=".doc, .docx, .pdf, .jpg, .png" class="wdt" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Submission</legend>
+        <button type="reset" class="btn">Reset</button>
+        <button type="submit" class="btn">Submit</button>
+      </fieldset>
     </form>
-</body>
+  </body>
 </html>
