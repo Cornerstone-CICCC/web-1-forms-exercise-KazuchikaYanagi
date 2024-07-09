@@ -19,13 +19,20 @@
         <input
           type="password"
           minlength="12"
+          pattern=".{12,}"
           title="Need at least 12 characters in this box"
           class="wdt"
           id="password"
         />
 
         <label for="form-data">Data of Birth:</label>
-        <input type="date" class="wdt" id="form-data" />
+        <input
+          type="date"
+          class="wdt"
+          id="form-data"
+          pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))"
+          value="yyyy-mm-dd"
+        />
       </fieldset>
 
       <fieldset>
@@ -77,7 +84,12 @@
       <fieldset id="Contact">
         <legend>Upload Documents</legend>
         <label for="file">Resume and other certificates:</label>
-        <input type="file" accept=".doc, .docx, .pdf, .jpg, .png" class="wdt" />
+        <input
+          type="file"
+          accept=".doc, .docx, .pdf, .jpg, .png"
+          class="wdt"
+          multiple
+        />
       </fieldset>
 
       <fieldset>
